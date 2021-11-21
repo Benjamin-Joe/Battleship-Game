@@ -27,4 +27,8 @@ Grid:
 
 To start building this project, I felt that it was best to start by building the game baords, that way I have somrthing I can look at as I progress through the build. It also helps me with tests, as I will be able to see what is going on as I write.
 
+Link to understand string formatting
+
+https://stackoverflow.com/questions/4288973/whats-the-difference-between-s-and-d-in-python-string-formatting/56382046
+
 
