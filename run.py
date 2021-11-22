@@ -5,7 +5,7 @@ import random
 # KEYS:
 # X = Hit Battleship / Battleships
 # O = Miss Battleship
-# ' ' = Spaces Availiable To Guess
+# ' ' = Spaces Available To Guess
 # V = Vertical
 # H = Horizontal
 # ______________ = Section Divider
@@ -15,7 +15,7 @@ import random
 # Letters_to_numbers = Allocating a number to the first 8 letter of the alphabet
 # game_ships = the sizes of the ships the player and computer will use
 
-# ______________________________________________________________________
+# __________________________________________________________________
 
 user_board = [[' '] * 9 for x in range(9)]
 user_guess_board = [[' '] * 9 for x in range(9)]
@@ -24,7 +24,7 @@ computer_board = [[' '] * 9 for x in range(9)]
 game_ships = [2, 3, 3, 4, 5]
 letters_to_numbers = {'A': 0, 'B': 1, 'C': 2, 'D': 3, 'E': 4, 'f': 5, 'G': 6, 'H': 7, 'I': 8}
 
-# ________________________________________________________________________
+# __________________________________________________________________
 
 
 def print_board(board):
@@ -39,7 +39,7 @@ def print_board(board):
         print("%d|%s|" % (row_number, "|".join(row)))
         row_number += 1
 
-# __________________________________________________________________________
+# __________________________________________________________________
 
 
 def place_ships(board):
@@ -62,7 +62,7 @@ def place_ships(board):
                                 board[i][column] = "X"
                         break
 
-# __________________________________________________________________________
+# __________________________________________________________________
 
 
 def check_ship_fits(ship_size, column, row, orientation):
@@ -80,7 +80,7 @@ def check_ship_fits(ship_size, column, row, orientation):
         else:
             return True
 
-# ________________________________________________________________________
+# __________________________________________________________________
 
 
 def check_for_overlap(row, column, orientation, ship_size, board):
@@ -95,7 +95,7 @@ def check_for_overlap(row, column, orientation, ship_size, board):
                     return True
         return False
 
-# _____________________________________________________________________________
+# __________________________________________________________________
 
 
 def user_input():
@@ -108,7 +108,10 @@ def user_input():
             except TypeError:
                 print("INVALID, Please Enter VALID Orientation H or V: ")
         while True:
-            break
+            row = input("Enter Row For Ship Placement 1-9: ")
+            if row in '123456789':
+                row = int(row) - 1
+                break
 
 
 """
