@@ -38,4 +38,6 @@ https://stackoverflow.com/questions/4288973/whats-the-difference-between-s-and-d
 
 I ran various tests at regular intervals to ensure that the code I was writing was working and if it wasn't then I would always roughly know where the problem was.  
 The first test I ran was just to check that the game boards printed out ok and look good, as pictures below:  
-<img src = ./images/game-boards.png alt="Images of game boards">
+<img src = ./images/game-boards.png alt="Images of game boards">  
+I decided to create a temporary file called run2, this allowed me to text small items alone before migrating it over to the main file. The first thing I tested here was the ability for user's to enter their name and have the game recognize them throughout their play.  
+<img src = "./images/remember-name.png" alt =" Function for getting player name">

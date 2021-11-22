@@ -74,14 +74,25 @@ def check_ship_fits(ship_size, column, row, orientation):
             return True
 
 
-def check_for_overlap():
-    """Checking if ships overlap eachother"""
+def check_for_overlap(row, column, orientation, ship_size, board):
+    """Checking if ships overlap"""
+    if orientation == "H":
+        for i in range(column, column + ship_size):
+            if board[row][i] == "X":
+                return True
+        else:
+            for i in range(row, row + ship_size):
+                if board[1][column] == "X":
+                    return True
+        return False
+
+def user_input():
     pass
 
+print_board(user_board)
+print_board(computer_board)
 
 """
-def user_input():
-
 
 def create_ships():
 
