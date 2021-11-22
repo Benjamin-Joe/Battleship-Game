@@ -27,7 +27,9 @@ Grid:
 
 To start building this project, I felt that it was best to start by building the game baords, that way I have somrthing I can look at as I progress through the build. It also helps me with tests, as I will be able to see what is going on as I write.  
 To help me stay focused on what needs to be done I added commented out functions that will need to be created in order to get the game working properly.  
-<img src="./images/to-do.png" alt="Image of commented out function names">
+<img src="./images/to-do.png" alt="Image of commented out function names">  
+Below is an image of the initial overview of the base functions. These are the main functions that I needed to create the game, I built off of these base functions.
+<img src="./images/overview.png" alt="Overview of base functions">
 
 Link to understand string formatting
 
@@ -40,4 +42,4 @@ I ran various tests at regular intervals to ensure that the code I was writing w
 The first test I ran was just to check that the game boards printed out ok and look good, as pictures below:  
 <img src = ./images/game-boards.png alt="Images of game boards">  
 I decided to create a temporary file called run2, this allowed me to text small items alone before migrating it over to the main file. The first thing I tested here was the ability for user's to enter their name and have the game recognize them throughout their play.  
-<img src = "./images/remember-name.png" alt =" Function for getting player name">
+<img src = "./images/remember-name.png" alt =" Function for getting player name">  

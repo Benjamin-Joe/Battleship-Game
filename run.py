@@ -8,13 +8,14 @@ import random
 # ' ' = Spaces Availiable To Guess
 # V = Vertical
 # H = Horizontal
+# ______________ = Section Divider
 
 # user_board = The board where the user's ships are placed
 # computer_board = The board where the computer's ships are placed
 # Letters_to_numbers = Allocating a number to the first 8 letter of the alphabet
 # game_ships = the sizes of the ships the player and computer will use
 
-# ----------------------------------------- Game Boards
+# ______________________________________________________________________
 
 user_board = [[' '] * 9 for x in range(9)]
 user_guess_board = [[' '] * 9 for x in range(9)]
@@ -22,6 +23,8 @@ computer_guess_board = [[' '] * 9 for x in range(9)]
 computer_board = [[' '] * 9 for x in range(9)]
 game_ships = [2, 3, 3, 4, 5]
 letters_to_numbers = {'A': 0, 'B': 1, 'C': 2, 'D': 3, 'E': 4, 'f': 5, 'G': 6, 'H': 7, 'I': 8}
+
+# ________________________________________________________________________
 
 
 def print_board(board):
@@ -35,6 +38,8 @@ def print_board(board):
     for row in board:
         print("%d|%s|" % (row_number, "|".join(row)))
         row_number += 1
+
+# __________________________________________________________________________
 
 
 def place_ships(board):
@@ -57,6 +62,8 @@ def place_ships(board):
                                 board[i][column] = "X"
                         break
 
+# __________________________________________________________________________
+
 
 def check_ship_fits(ship_size, column, row, orientation):
     """
@@ -73,6 +80,8 @@ def check_ship_fits(ship_size, column, row, orientation):
         else:
             return True
 
+# ________________________________________________________________________
+
 
 def check_for_overlap(row, column, orientation, ship_size, board):
     """Checking if ships overlap"""
@@ -86,11 +95,21 @@ def check_for_overlap(row, column, orientation, ship_size, board):
                     return True
         return False
 
-def user_input():
-    pass
+# _____________________________________________________________________________
 
-print_board(user_board)
-print_board(computer_board)
+
+def user_input():
+    if place_ships == True:
+        while True:
+            try:
+                orientation = input("Enter Ship Orientation H(orizontal) Or V(ertical):  ").upper()
+                if orientation == "H" or orientation == "V":
+                    break
+            except TypeError:
+                print("INVALID, Please Enter VALID Orientation H or V: ")
+        while True:
+            break
+
 
 """
 
